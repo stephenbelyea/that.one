@@ -1,0 +1,171 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s,
+samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul,
+li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html, body {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  color: black;
+}
+
+body.default {
+  font-family: Helvetica, sans-serif;
+  font-size: 100%;
+}
+body.default #wrapper {
+  width: 70%;
+  margin: 0 auto;
+  padding: 2em;
+}
+body.default header, body.default footer {
+  padding: 1.5em 0;
+}
+body.default h1, body.default h2, body.default h3, body.default h4, body.default strong, body.default button {
+  font-weight: bold;
+}
+body.default h2, body.default h4 {
+  text-transform: uppercase;
+}
+body.default h1 {
+  font-size: 3em;
+  color: tomato;
+}
+body.default h2, body.default h3 {
+  font-size: 2em;
+}
+body.default h3 {
+  color: tomato;
+}
+body.default em {
+  font-style: italic;
+}
+body.default h1, body.default h2, body.default h3, body.default h4 {
+  margin-bottom: 0.75em;
+}
+body.default p {
+  margin-bottom: 1.5em;
+}
+body.default p a, body.default li a {
+  color: tomato;
+  text-decoration: none;
+  border-bottom: dotted 1px;
+}
+body.default p a:hover, body.default li a:hover {
+  color: black;
+  border-bottom: solid 1px;
+}
+body.default button {
+  background: tomato;
+  border: solid 1px tomato;
+  font-size: 1.25em;
+  padding: 0.25em 1em;
+  margin: 1em 1em 1em 0;
+  color: white;
+  border-radius: 0.1em;
+  display: inline-block;
+  transition: color 0.25s, background 0.25s;
+}
+body.default button:hover {
+  background: white;
+  color: tomato;
+}
+body.default img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: 1em auto;
+}
+body.default ul {
+  margin: 1.5em 0;
+  padding: 0 2em;
+  list-style: disc;
+}
+body.default .clear {
+  width: 100%;
+  display: block;
+  clear: both;
+}
+body.default .br {
+  height: 1em;
+}
+body.default .ctr {
+  text-align: center;
+}
+
+.nogood {
+  width: 90%;
+  padding: 15px 5% 10px;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  display: block;
+  font-size: 15px;
+  line-height: 18px;
+  font-family: Arial, sans-serif;
+}
+.nogood p {
+  margin: 6px 0;
+}
+.nogood strong {
+  font-weight: bold;
+}
+.nogood em, .nogood a {
+  font-style: italic;
+  font-weight: bold;
+}
+
+#oldie {
+  background: #00a6e1;
+  color: white;
+  bottom: 0;
+}
+#oldie a {
+  color: white;
+}
+
+#nojs {
+  background: #fbdb69;
+  color: #2e2e2c;
+  top: 0;
+}
+
+/*# sourceMappingURL=global.css.map */

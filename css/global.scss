@@ -1,0 +1,180 @@
+// *** UNSTYLING
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, 
+samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, 
+li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, 
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section,
+main{ display: block; }
+body{ line-height: 1; }
+ol, ul{ list-style: none; }
+blockquote, q{ quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after{ content: ''; content: none; }
+table{ border-collapse: collapse; border-spacing: 0; }
+
+// *** MIXINS
+@mixin bp($bp) {
+	// Preset breakpoint values
+  	$iphP: "(min-width: 320px)";
+	$iphL: "(min-width: 568px)";
+	$ipaP: "(min-width: 768px)";
+  	$ipaL: "(min-width: 1024px)";
+  	$lapt: "(min-width: 1200px)";
+  	$desk: "(min-width: 1400px)";
+  	$retina: "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 2dppx)";
+	// And corresponding media queries
+	@if $bp == iphP { @media screen and #{$iphP} { @content; } }
+	@else if $bp == iphL { @media screen and #{$iphL} { @content; } }
+	@else if $bp == ipaP { @media screen and #{$ipaP} { @content; } }
+	@else if $bp == ipaL { @media screen and #{$ipaL} { @content; } }
+	@else if $bp == lapt { @media screen and #{$lapt} { @content; } }
+	@else if $bp == desk { @media screen and #{$desk} { @content; } }
+	@else if $bp == retina { @media screen and #{$retina} { @content; } }
+	@else { @media screen and ($bp) { @content; } }
+}
+@mixin anim($args...){
+	-webkit-animation: $args;
+	-moz-animation: $args;
+	-ms-animation: $args;
+	-o-animation: $args;
+	animation: $args;
+}
+@mixin keyf($name){
+    @-webkit-keyframes $name { @content; }
+    @-moz-keyframes $name { @content; }
+    @-ms-keyframes $name { @content; }
+    @-o-keyframes $name { @content; }
+    @keyframes $name { @content; }
+}
+
+// *** VARIABLES
+
+
+
+// *** STYLING (DEFAULT)
+html,body{
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	color: black;
+}
+body.default{
+	font-family: Helvetica, sans-serif;
+	font-size: 100%;
+	#wrapper{
+		width: 70%;
+		margin: 0 auto;
+		padding: 2em;
+	}
+	header,footer{ padding: 1.5em 0; }
+	h1,h2,h3,h4,strong,button{ font-weight: bold; }
+	h2,h4{ text-transform: uppercase; }
+	h1{ font-size: 3em; color: tomato; }
+	h2,h3{ font-size: 2em; }
+	h3{ color: tomato; }
+	em{ font-style: italic; }
+	h1,h2,h3,h4{ margin-bottom: 0.75em; }
+	p{ margin-bottom: 1.5em; }
+	p a,li a{
+		color: tomato;
+		text-decoration: none;
+		border-bottom: dotted 1px;
+		&:hover{
+			color: black;
+			border-bottom: solid 1px;
+		}
+	}
+	button{
+		background: tomato;
+		border: solid 1px tomato;
+		font-size: 1.25em;
+		padding: 0.25em 1em;
+		margin: 1em 1em 1em 0;
+		color: white;
+		border-radius: 0.1em;
+		display: inline-block;
+		transition: color 0.25s, background 0.25s;
+		&:hover{
+			background: white;
+			color: tomato;
+		}
+	}
+	img{
+		display: block;
+		max-width: 100%;
+		width: auto;
+		height: auto;
+		margin: 1em auto;
+	}
+	ul{
+		margin: 1.5em 0;
+		padding: 0 2em;
+		list-style: disc;
+	}
+	.clear{
+		width: 100%;
+		display: block;
+		clear: both;
+	}
+	.br{ height: 1em; }
+	.ctr{ text-align: center; }
+}
+
+// *** BROWSER FLAGS
+.nogood{
+	width: 90%;
+  	padding: 15px 5% 10px;
+  	position: fixed;
+  	z-index: 9999;
+  	left: 0;
+  	display: block;
+  	font-size: 15px;
+  	line-height: 18px;
+  	font-family: Arial, sans-serif;
+  	p{ margin: 6px 0; }
+  	strong{ font-weight: bold; }
+  	em, a{ font-style: italic; font-weight: bold; }
+}
+#oldie{
+	background: #00a6e1;
+	color: white;
+	bottom: 0;
+	a{ color: white; }
+}
+#nojs{
+	background: #fbdb69;
+	color: #2e2e2c;
+	top: 0;
+}
+
+
+
+// *** STYLING (CUSTOM)
+
+
+
+// *** RESPONSIVE
+@include bp(iphP){}
+@include bp(iphL){}
+@include bp(ipaP){}
+@include bp(ipaL){}
+@include bp(lapt){} 
+@include bp(desk){} 
+
+
+
+// *** RETINA
+@include bp(retina){}
+
+
+
+
+

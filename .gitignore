@@ -1,0 +1,7 @@
+config.json
+# Drop Apple file
+.DS_Store
+# Don't track extraneous task files.
+node_modules/*
+*.sass-cache*
+npm-debug.log
