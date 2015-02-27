@@ -1,0 +1,6 @@
+{
+    "tmdb_api": {
+        "key": "API_KEY",
+        "url": "APP_URL"
+    }
+}
