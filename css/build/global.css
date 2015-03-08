@@ -66,13 +66,13 @@ body.default h2, body.default h4 {
 }
 body.default h1 {
   font-size: 3em;
-  color: tomato;
+  color: DarkSlateBlue;
 }
 body.default h2, body.default h3 {
   font-size: 2em;
 }
 body.default h3 {
-  color: tomato;
+  color: DarkSlateBlue;
 }
 body.default em {
   font-style: italic;
@@ -84,7 +84,7 @@ body.default p {
   margin-bottom: 1.5em;
 }
 body.default p a, body.default li a {
-  color: tomato;
+  color: DarkSlateBlue;
   text-decoration: none;
   border-bottom: dotted 1px;
 }
@@ -93,8 +93,8 @@ body.default p a:hover, body.default li a:hover {
   border-bottom: solid 1px;
 }
 body.default button {
-  background: tomato;
-  border: solid 1px tomato;
+  background: DarkSlateBlue;
+  border: solid 1px DarkSlateBlue;
   font-size: 1.25em;
   padding: 0.25em 1em;
   margin: 1em 1em 1em 0;
@@ -105,19 +105,13 @@ body.default button {
 }
 body.default button:hover {
   background: white;
-  color: tomato;
+  color: DarkSlateBlue;
 }
 body.default img {
   display: block;
   max-width: 100%;
   width: auto;
   height: auto;
-  margin: 1em auto;
-}
-body.default ul {
-  margin: 1.5em 0;
-  padding: 0 2em;
-  list-style: disc;
 }
 body.default .clear {
   width: 100%;
@@ -166,6 +160,113 @@ body.default .ctr {
   background: #fbdb69;
   color: #2e2e2c;
   top: 0;
+}
+
+body.thatone {
+  background: DeepSkyBlue;
+}
+body.thatone #wrapper {
+  width: 85%;
+}
+body.thatone .results {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 5em;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+body.thatone .results .altF, body.thatone .results button {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+body.thatone .result {
+  max-width: 250px;
+  margin: 1em 2em 1em 0;
+  padding: 0.5em;
+  border: solid 0.1em SteelBlue;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25em;
+  background: FloralWhite;
+}
+body.thatone .result-frame {
+  width: 250px;
+  height: 375px;
+  display: block;
+  margin-bottom: 0.5em;
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+body.thatone .result-frame .poster.null {
+  width: 250px;
+  height: 375px;
+  display: block;
+  background: url(../../images/no-poster.jpg) top center no-repeat white;
+}
+body.thatone .result-frame .meta {
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), black);
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+}
+body.thatone .result-frame .meta .title {
+  color: white;
+  padding: 0.5em 12px 0.1em;
+  margin: 0;
+  font-size: 1.75em;
+  font-weight: bold;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.8);
+}
+body.thatone .result-frame .meta .val {
+  padding: 0 12px 0.5em;
+  font-size: 0.85em;
+  display: inline-block;
+  color: white;
+}
+body.thatone .result-frame .meta .val i {
+  color: LightCoral;
+  padding-right: 0.15em;
+}
+body.thatone .result-frame .meta .val.vote {
+  float: right;
+}
+body.thatone .result-frame .meta .val.vote:after {
+  content: "/10";
+  font-size: 65%;
+  color: Gainsboro;
+}
+body.thatone .result-action button {
+  width: 48.5%;
+  border: none;
+  background: MediumSeaGreen;
+  border: solid 0.1em;
+  border-radius: 0.25em;
+  padding: 0.5em;
+  margin: 0;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1em;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+body.thatone .result-action button:hover {
+  color: WhiteSmoke;
+}
+body.thatone .result-action button.mark {
+  background: PaleVioletRed;
+  border-color: MediumVioletRed;
+}
+body.thatone .result-action button.mark:hover {
+  background: MediumVioletRed;
+}
+body.thatone .result-action button.find {
+  float: right;
+  background: MediumSeaGreen;
+  border-color: ForestGreen;
+}
+body.thatone .result-action button.find:hover {
+  background: ForestGreen;
 }
 
 /*# sourceMappingURL=global.css.map */

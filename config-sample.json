@@ -1,4 +1,7 @@
 {
-    "key": "API_KEY",
-    "url": "APP_URL"
+    "user_key" : "API_KEY_GOES_HERE",
+    "home_app" : "APP_URL_GOES_HERE",
+    "base_que" : "http://api.themoviedb.org/3/search/movie?api_key=",
+    "base_img" : "http://image.tmdb.org/t/p/",
+    "size_img" : "w300"  // Default to mid mid size poster image
 }
